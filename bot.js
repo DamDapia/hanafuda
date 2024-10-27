@@ -1,3 +1,4 @@
+import { privateKey } from './wallet.js';
 const { ethers } = require("ethers");
 require('dotenv').config(); // Memuat variabel lingkungan dari .env
 const fs = require('fs');
@@ -8,7 +9,6 @@ const config = JSON.parse(fs.readFileSync('config.json', 'utf8'));
 
 // Data koneksi dan transaksi
 const provider = new ethers.JsonRpcProvider("https://arb1.arbitrum.io/rpc"); // Masukkan URL RPC Node sesuai kebutuhan
-const privateKey = process.env.PRIVATE_KEY; // Mengambil private key dari file .env
 const wallet = new ethers.Wallet(privateKey, provider);
 
 // Menampilkan banner ASCII
