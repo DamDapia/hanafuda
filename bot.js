@@ -64,7 +64,7 @@ async function depositETH(manualValue) {
         const feeData = await provider.getFeeData();
 
         const tx = {
-            chainId: 8453,
+            chainId: 42161,
             from: wallet.address,
             to: "0xC5bf05cD32a14BFfb705Fb37a9d218895187376c",
             value: valueInWei,
