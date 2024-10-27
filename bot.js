@@ -7,7 +7,7 @@ const colors = require('colors'); // Memasukkan colors untuk output
 const config = JSON.parse(fs.readFileSync('config.json', 'utf8'));
 
 // Data koneksi dan transaksi
-const provider = new ethers.JsonRpcProvider("https://base.llamarpc.com"); // Masukkan URL RPC Node sesuai kebutuhan
+const provider = new ethers.JsonRpcProvider("https://arb1.arbitrum.io/rpc"); // Masukkan URL RPC Node sesuai kebutuhan
 const privateKey = process.env.PRIVATE_KEY; // Mengambil private key dari file .env
 const wallet = new ethers.Wallet(privateKey, provider);
 
